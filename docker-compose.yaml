@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  php:
+    image: "php:latest"
+    volumes:
+      - .:/app
+    build:
+      context: .
+    tty: true
