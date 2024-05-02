@@ -4,7 +4,10 @@ up: ## Start the docker hub in detached mode (no logs)
 	@$(DOCKER_COMP) up -d
 
 down:
-	@$(DOCKER_COMP) down
+	@$(DOCKER_COMP) down --remove-orphans
 
 hello:
-	@$(DOCKER) exec -it phptraining-php-1 php app/index.php
+	@$(DOCKER) exec -it phptraining-php-1 php app/app/index.php
+
+php:
+	@$(DOCKER) exec -it phptraining-php-1 php
